@@ -17,7 +17,7 @@ public class VacationPayController {
 
     private final VacationPayService vacationPayService;
 
-    @GetMapping("/count")
+    @GetMapping("/calculacte")
     public double countVacation(@RequestBody VacationPayRequest vacationPayRequest) throws CalculatorException {
         return vacationPayService.countVacation(vacationPayRequest);
     }
