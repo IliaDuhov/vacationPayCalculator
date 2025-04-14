@@ -1,7 +1,6 @@
 package ru.duhov.vacationPayCalculator.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +16,8 @@ public class VacationPayController {
 
     private final VacationPayService vacationPayService;
 
-    @GetMapping("/count")
-    public double countVacation(@RequestBody VacationPayRequest vacationPayRequest) throws CalculatorException {
+    @GetMapping("/calculate")
+    public double calculateVacation(@RequestBody VacationPayRequest vacationPayRequest) throws CalculatorException {
         return vacationPayService.countVacation(vacationPayRequest);
     }
 }
